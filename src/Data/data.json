@@ -1,0 +1,85 @@
+[
+    {
+        "id": 1,
+        "name": "Cornflakes",
+        "price": 2.99,
+        "imgUrl": "/imgs/Cornflakes.jpeg",
+        "upc": "upc=038000001208" 
+        
+    },
+
+    {
+        "id": 2,
+        "name": "Frosted Flakes",
+        "price": 4.50,
+        "imgUrl": "/imgs/frosties.jpeg",
+        "upc": "upc=038000199042" 
+        
+    },
+
+    {
+        "id": 3,
+        "name": "Honey Cheerios",
+        "price": 3.20,
+        "imgUrl": "/imgs/cherrios.jpeg",
+        "upc": "upc=016000123151" 
+    },
+
+    {
+        "id": 4,
+        "name": "All-Bran",
+        "price": 2,
+        "imgUrl": "/imgs/allbran.jpeg",
+        "upc": "upc=038000596674" 
+    },
+
+    {
+        "id": 5,
+        "name": "Special K",
+        "price": 4.70,
+        "imgUrl": "/imgs/specialk.jpeg",
+        "upc": "upc=038000016110" 
+    },
+
+    {
+        "id": 6,
+        "name": "Rice Bubbles",
+        "price": 5.99,
+        "imgUrl": "/imgs/ricebubbles.jpeg",
+        "upc": "upc=074333474296" 
+    },
+
+    {
+        "id": 7,
+        "name": "Fruit Loops",
+        "price": 4.75,
+        "imgUrl": "/imgs/fruitloops.jpeg",
+        "upc": "upc=038000991608"  
+    },
+
+    {
+        "id": 8,
+        "name": "Rolled Oats",
+        "price": 4.75,
+        "imgUrl": "/imgs/oats.jpeg",
+        "upc": "upc=030000010204"  
+    },
+
+    {
+        "id": 9,
+        "name": "Lucky Charms",
+        "price": 4.75,
+        "imgUrl": "/imgs/lucky.jpeg",
+        "upc": "upc=016000123991"  
+    },
+
+    {
+        "id": 10,
+        "name": "Granola",
+        "price": 4.75,
+        "imgUrl": "/imgs/granola.jpeg",
+        "upc": "upc=050596000014"  
+    }
+
+    
+]

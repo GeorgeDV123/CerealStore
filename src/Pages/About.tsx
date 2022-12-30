@@ -1,4 +1,4 @@
-import { AboutForm } from "../componets/AboutForm";
+import { AboutForm } from "../Componets/AboutForm";
 import Container from "react-bootstrap/Container";
 
 export function About() {
