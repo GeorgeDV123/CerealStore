@@ -1,16 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 
 // Variables + Mixins
+
 $color1: #fce38a;
 $color2: #95e1d3;
 
-@mixin center{
+@mixin center {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 // Navbar
+
 .navbar1 {
   background: $color1;
 }
@@ -86,3 +88,7 @@ $color2: #95e1d3;
   right: 0;
   transform: translate(25%, 25%);
 }
+
+// About Page
+
+

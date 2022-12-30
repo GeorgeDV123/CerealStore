@@ -1,5 +1,15 @@
+import { AboutForm } from "../componets/AboutForm";
+import Container from "react-bootstrap/Container";
+
 export function About() {
-  return(
-    <div>Hi from about</div>
-  )
+  document.body.style.background = "ivory";
+  return (
+    <>
+      <div className="about-img"></div>
+
+      
+
+      <AboutForm />
+    </>
+  );
 }
