@@ -91,4 +91,19 @@ $color2: #95e1d3;
 
 // About Page
 
+.about-img {
+  background: url("/imgs/cereal3.jpeg");
+  background-size: cover;
+  width: 100vw;
+  height: 50vh;
+}
 
+.about-box {
+  @include center;
+}
+
+.about-head {
+  font-family: "Nerko One", cursive;
+  padding: 1rem;
+  font-size: 3rem;
+}
