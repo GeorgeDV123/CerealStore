@@ -9,8 +9,8 @@ export function About() {
 
       <Container className="w-75 mb-5">
         <div>
-          <span className="about-box">
-            <h1 className="about-head">About</h1>
+          <span className="h-box">
+            <h1 className="h-text">About</h1>
           </span>
           <p style={{ textAlign: "justify" }}>
             Our cereals are the best you will find anywhere, Lorem ipsum dolor

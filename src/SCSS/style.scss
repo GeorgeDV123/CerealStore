@@ -89,7 +89,7 @@ $color2: #95e1d3;
   transform: translate(25%, 25%);
 }
 
-// About Page
+// About Page + Store Page
 
 .about-img {
   background: url("/imgs/cereal3.jpeg");
@@ -98,12 +98,57 @@ $color2: #95e1d3;
   height: 50vh;
 }
 
-.about-box {
-  @include center;
-}
-
-.about-head {
+.h-text {
   font-family: "Nerko One", cursive;
   padding: 1rem;
   font-size: 3rem;
+}
+
+.h-box {
+  @include center
+}
+
+// Store Item
+.store-card:hover, .store-card:active  {
+  opacity: 60%;
+  transition: 0.3s;
+  border: solid black 1px;
+  cursor: pointer;
+  animation: wobble 1s ease;
+}
+
+@keyframes wobble {
+  0%, 100% {
+      transform: translateX(0%);
+      transform-origin: 50% 50%;
+  }
+
+  15% {
+      transform:  rotate(-5deg);
+  }
+
+  30% {
+      transform:  rotate(5deg);
+  }
+
+  45% {
+      transform: rotate(calc(-5deg / 1.8));
+  }
+
+  60% {
+      transform: rotate(calc(5deg / 3));
+  }
+
+  75% {
+      transform: rotate(calc(-5deg / 5));
+  }
+}
+
+.button-add {
+  background-color: $color2;
+  border: none;
+}
+
+.button-add:hover {
+  background-color: #84c3b7;
 }

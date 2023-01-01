@@ -56,7 +56,7 @@ export function StoreItem({ id, name, price, imgUrl, upc }: StoreItemProps) {
         <Modal.Body>
           <Row className="d-flex align-items-end">
             <Col lg={3}>
-              <Image src={imgUrl} className="imgF"></Image>
+              <Image src={imgUrl} className="w-100 h-auto"></Image>
             </Col>
             <Col lg={3}>
               <span>
@@ -64,7 +64,7 @@ export function StoreItem({ id, name, price, imgUrl, upc }: StoreItemProps) {
               </span>
             </Col>
             <Col lg={6}>
-              <span className="shop-text ">
+              <span>
                 <br />
                 <br />
                 One of our best cereals, <b>{name}</b>. Nulla semper fringilla
