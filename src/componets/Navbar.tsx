@@ -2,8 +2,10 @@ import Container from "react-bootstrap/Container";
 import Button from "react-bootstrap/esm/Button";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { useShoppingCart } from "./Context/ShoppingCartContext";
 
 export function Navbar1() {
+  const { openCart, cartQuantity } = useShoppingCart();
   return (
     <Navbar sticky="top" variant="light" className="navbar1">
       <Container>
@@ -23,17 +25,15 @@ export function Navbar1() {
         </Nav>
 
         <Button
+          onClick={openCart}
           variant="outline-dark"
           className="rounded-circle cart-circle-big"
         >
-          <img
-            src="/imgs/cart-1.svg"
-            className="cart-img"
-          ></img>
+          <img src="/imgs/cart-1.svg" className="cart-img"></img>
 
-          <div
-            className="cart-circle-small rounded-circle d-flex justify-content-center align-items-center"
-          ></div>
+          <div className="cart-circle-small rounded-circle d-flex justify-content-center align-items-center">
+            {cartQuantity}
+          </div>
         </Button>
       </Container>
     </Navbar>

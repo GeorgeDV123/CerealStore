@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button, Card, Col, Row, Image, Form } from "react-bootstrap";
-import { useShoppingCart } from "../context/ShoppingCartContext";
-import { formatCurrency, formatNutrient } from "./formatCurrency";
+import { useShoppingCart } from "./Context/ShoppingCartContext";
+import { formatCurrency, formatNutrient } from "../Utilities/format";
 import Modal from "react-bootstrap/Modal";
 
 interface StoreItemProps {
@@ -12,6 +12,7 @@ interface StoreItemProps {
   upc: string;
 }
 
+// Shopping cart functions
 export function StoreItem({ id, name, price, imgUrl, upc }: StoreItemProps) {
   const {
     getItemQuantity,
@@ -21,12 +22,14 @@ export function StoreItem({ id, name, price, imgUrl, upc }: StoreItemProps) {
   } = useShoppingCart();
   const quantity = getItemQuantity(id);
 
+  // State for modals
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   return (
     <>
+      {/* Store cards */}
       <Card className="h-100 store-card" onClick={handleShow}>
         <Card.Img
           variant="top"
@@ -45,6 +48,7 @@ export function StoreItem({ id, name, price, imgUrl, upc }: StoreItemProps) {
         </Card.Body>
       </Card>
 
+      {/* Modal with nutritional info + cart buttons */}
       <Modal show={show} onHide={handleClose} size="xl" centered>
         <Modal.Header closeButton>
           <Modal.Title>{name}</Modal.Title>

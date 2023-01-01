@@ -1,9 +1,10 @@
 import { Col, Container, Row } from 'react-bootstrap'
-import { StoreItem } from '../components/StoreItem'
+import { StoreItem } from '../Componets/StoreItem'
 import storeItems from '../data/Data.json'
 
 export function Store () {
   document.body.style.background = 'ivory'
+  // Display store items
   return (
     <>
     <Container className="mb-4 mt-4 p-2" >
