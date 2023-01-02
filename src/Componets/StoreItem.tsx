@@ -22,6 +22,45 @@ export function StoreItem({ id, name, price, imgUrl, upc }: StoreItemProps) {
   } = useShoppingCart();
   const quantity = getItemQuantity(id);
 
+  // API request for nutrition infomation
+  const [nut, setNut] = useState<any>([]);
+
+  function handleErrors(response:any) {
+    if (!response.ok) {
+        throw Error(response.statusText);
+    } 
+    return response;
+}  
+  const fetchUserData = () => {
+    fetch(
+      "https://api.edamam.com/api/food-database/v2/parser?app_id=3e71f84e&app_key=e82a00c016f72e17008dad6190418b49&" +
+        upc +
+        "&nutrition-type=cooking"
+    )
+      .then(handleErrors)
+      .catch(error => window.prompt(error.message, 'Sorry, nutritional info is unavaliable') )
+      .then(async (response) => {
+        return await response.json();
+      })
+      .then((data) => {
+        const energy = formatNutrient(data.hints[0].food.nutrients.ENERC_KCAL);
+        const carb = formatNutrient(data.hints[0].food.nutrients.CHOCDF);
+        const protien = formatNutrient(data.hints[0].food.nutrients.PROCNT);
+        const fat = formatNutrient(data.hints[0].food.nutrients.FAT);
+        const fiber = formatNutrient(data.hints[0].food.nutrients.FIBTG);
+        const potassium = formatNutrient(data.hints[0].food.nutrients.K);
+        const nut = [energy, carb, protien, fat, fiber, potassium];
+
+        setNut(nut);
+      })
+      
+  };
+
+  useEffect(() => {
+    fetchUserData();
+  }, [])
+
+
   // State for modals
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -60,7 +99,13 @@ export function StoreItem({ id, name, price, imgUrl, upc }: StoreItemProps) {
             </Col>
             <Col lg={3}>
               <span>
-                <b>All nutrition is per serving:</b>
+                <b>All nutrition is per serving:</b><br />
+                ⚡ Energy: {nut[0]} kCal <br />
+                🌾 Carbohydrates: {nut[1]} g <br /> 
+                💪 Protein: {nut[2]} g{" "} <br /> 
+                🧈 Fat: {nut[3]} g <br /> 
+                ❤️ Fiber: {nut[4]} g <br /> 
+                🇰 Potassium: {nut[5]} g
               </span>
             </Col>
             <Col lg={6}>
