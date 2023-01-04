@@ -81,7 +81,7 @@ export function StoreItem({ id, name, price, imgUrl, upc }: StoreItemProps) {
             <span className="fs-2">{name}</span>
           </Card.Title>
           <Card.Subtitle>
-            <span className="text-muted">{formatCurrency(price)} each</span>
+            <span className="text-muted">{formatCurrency(price)} per box</span>
             <span className="text-muted float-end">{quantity} in cart</span>
           </Card.Subtitle>
         </Card.Body>

@@ -4,11 +4,16 @@
 
 $color1: #fce38a;
 $color2: #95e1d3;
+$color3: #6ea79d;
 
 @mixin center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+body {
+  background-color: ivory
 }
 
 // Navbar
@@ -105,11 +110,12 @@ $color2: #95e1d3;
 }
 
 .h-box {
-  @include center
+  @include center;
 }
 
 // Store Item
-.store-card:hover, .store-card:active  {
+.store-card:hover,
+.store-card:active {
   opacity: 60%;
   transition: 0.3s;
   border: solid black 1px;
@@ -118,29 +124,30 @@ $color2: #95e1d3;
 }
 
 @keyframes wobble {
-  0%, 100% {
-      transform: translateX(0%);
-      transform-origin: 50% 50%;
+  0%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
   }
 
   15% {
-      transform:  rotate(-5deg);
+    transform: rotate(-5deg);
   }
 
   30% {
-      transform:  rotate(5deg);
+    transform: rotate(5deg);
   }
 
   45% {
-      transform: rotate(calc(-5deg / 1.8));
+    transform: rotate(calc(-5deg / 1.8));
   }
 
   60% {
-      transform: rotate(calc(5deg / 3));
+    transform: rotate(calc(5deg / 3));
   }
 
   75% {
-      transform: rotate(calc(-5deg / 5));
+    transform: rotate(calc(-5deg / 5));
   }
 }
 
@@ -151,4 +158,87 @@ $color2: #95e1d3;
 
 .button-add:hover {
   background-color: #84c3b7;
+}
+
+// Home Page
+.home-box {
+  padding-left: 15rem;
+  padding-top: 10rem;
+  height: 70vh;
+  width: 70vw;
+}
+
+.home-box h1 {
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
+}
+
+.home-btn {
+  background-color: $color2;
+  border: none;
+  color: black;
+  font-style: italic;
+}
+
+.home-btn:hover {
+  background-color: $color3;
+}
+
+.home-img {
+  background: url("/imgs/cereal4.jpeg") center center no-repeat fixed;
+  background-size: cover;
+  width: 98.9vw;
+  height: 70vh;
+  border: 0.3rem solid black;
+}
+
+.featured {
+  position: relative;
+  overflow: hidden;
+  height: 50vh;
+}
+
+.feature {
+  position: absolute;
+  left: -100%;
+  top: 10%;
+  animation: move 10s linear 2s infinite;
+}
+
+@keyframes move {
+  from {
+    left: -90%;
+  }
+  to {
+    left: 100%;
+  }
+}
+
+// Confirm Page
+
+.confirm-box {
+  height: 75vh;
+  width: 50vw;
+  border: 0.3rem solid black;
+  padding: 1rem;
+  background-color: rgba(255, 255, 240, 0.8);
+  margin: auto;
+  overflow: scroll;
+}
+
+// Footer
+.footer {
+  display: flex;
+  align-items: center;
+  gap: 11rem;
+}
+
+.footer-img {
+  width: 2rem;
+  height: 2rem;
+  display: inline;
+  position: relative;
+  align-items: center;
+  justify-content: center;
 }

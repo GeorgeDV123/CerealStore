@@ -3,7 +3,6 @@ import { StoreItem } from '../Componets/StoreItem'
 import storeItems from '../data/Data.json'
 
 export function Store () {
-  document.body.style.background = 'ivory'
   // Display store items
   return (
     <>

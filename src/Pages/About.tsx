@@ -2,13 +2,12 @@ import { AboutForm } from "../Componets/AboutForm";
 import Container from "react-bootstrap/Container";
 
 export function About() {
-  document.body.style.background = "ivory";
   return (
     <>
       <div className="about-img"></div>
 
       <Container className="w-75 mb-5">
-        <div>
+        <section>
           <span className="h-box">
             <h1 className="h-text">About</h1>
           </span>
@@ -31,7 +30,7 @@ export function About() {
             fringilla, ligula sit amet dignissim porta, odio ante lacinia dolor,
             sit amet luctus ipsum tortor ut odio.
           </p>
-        </div>
+        </section>
       </Container>
 
       <AboutForm />

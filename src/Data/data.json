@@ -28,7 +28,7 @@
     {
         "id": 4,
         "name": "All-Bran",
-        "price": 2,
+        "price": 3,
         "imgUrl": "/imgs/allbran.jpeg",
         "upc": "upc=038000596674" 
     },
@@ -60,7 +60,7 @@
     {
         "id": 8,
         "name": "Rolled Oats",
-        "price": 4.75,
+        "price": 1.75,
         "imgUrl": "/imgs/oats.jpeg",
         "upc": "upc=030000010204"  
     },
@@ -68,7 +68,7 @@
     {
         "id": 9,
         "name": "Lucky Charms",
-        "price": 4.75,
+        "price": 5.50,
         "imgUrl": "/imgs/lucky.jpeg",
         "upc": "upc=016000123991"  
     },
@@ -76,7 +76,7 @@
     {
         "id": 10,
         "name": "Granola",
-        "price": 4.75,
+        "price": 2.25,
         "imgUrl": "/imgs/granola.jpeg",
         "upc": "upc=050596000014"  
     }
