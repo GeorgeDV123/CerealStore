@@ -4,7 +4,7 @@ import Container from "react-bootstrap/Container";
 export function About() {
   return (
     <>
-      <div className="about-img"></div>
+      <div className="about-img" aria-label="Bowls of cereal"></div>
 
       <Container className="w-75 mb-5">
         <section>

@@ -1,0 +1,95 @@
+/* Media Queries */
+
+@media (min-width: 320px) and (max-width: 768px) {
+  // Navbar
+  .navbar1 {
+    font-size: 90%;
+  }
+  .brand {
+    padding-left: 0.5rem;
+    font-size: 1.5rem;
+    letter-spacing: normal;
+  }
+
+  .cart-circle-big {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .cart-circle-small {
+    width: 1.2rem;
+    height: 1.2rem;
+    font-size: 90%;
+  }
+
+  .cart-img {
+    height: 1.8rem;
+    width: 1.8rem;
+  }
+
+  // Store
+  .modal {
+    width: 100vw;
+  }
+
+  // Footer
+  footer {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  //Home Page
+  .home-box {
+    grid-template-columns: auto;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .home-box img {
+    width: 30%;
+    margin-top: 30px;
+    margin-left: 38%;
+  }
+
+  .home-box h1 {
+    font-size: 3rem;
+  }
+
+  .store-card-feat {
+    width: 100%;
+  }
+
+  .feature {
+    display: grid;
+    grid-template-columns: repeat(3, 15rem);
+    gap: 3rem;
+    animation: move 6.5s linear 2s infinite;
+  }
+
+  @keyframes move {
+    from {
+      left: -200%;
+    }
+    to {
+      left: 100%;
+    }
+  }
+
+  //Confirm page
+  .confirm-box {
+    width: 90vw;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1000px) {
+  .home-box img {
+    width: 100%;
+    margin-top: 50%;
+  }
+
+  .feature {
+    animation: move 7.5s linear 2s infinite;
+  }
+}

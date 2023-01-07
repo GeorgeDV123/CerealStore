@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Button, Card, Col, Row, Image, Form } from "react-bootstrap";
+import { Button, Card, Col, Row, Image } from "react-bootstrap";
 import { useShoppingCart } from "./Context/ShoppingCartContext";
 import { formatCurrency, formatNutrient } from "../Utilities/format";
 import Modal from "react-bootstrap/Modal";
@@ -88,14 +88,14 @@ export function StoreItem({ id, name, price, imgUrl, upc }: StoreItemProps) {
       </Card>
 
       {/* Modal with nutritional info + cart buttons */}
-      <Modal show={show} onHide={handleClose} size="xl" centered>
+      <Modal show={show} onHide={handleClose} size="xl" centered className="modal">
         <Modal.Header closeButton>
           <Modal.Title>{name}</Modal.Title>
         </Modal.Header>
         <Modal.Body>
           <Row className="d-flex align-items-end">
             <Col lg={3}>
-              <Image src={imgUrl} className="w-100 h-auto"></Image>
+              <Image src={imgUrl} className="imgF"></Image>
             </Col>
             <Col lg={3}>
               <span>
