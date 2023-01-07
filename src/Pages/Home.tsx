@@ -7,14 +7,19 @@ export function Home() {
     <>
       {/* Header */}
       <header className="home-box">
-        <h5 className="text-muted">The best way to start your morning</h5>
-        <h1 className="big">Stocking only the finest, high quality cereals</h1>
-        <Button size="lg" className="home-btn" href="/store">
-          To Store
-        </Button>
+        <div>
+          <h5 className="text-muted">The best way to start your morning</h5>
+          <h1>
+            Stocking only the finest, high quality cereals
+          </h1>
+          <Button size="lg" className="home-btn" href="/store">
+            To Store
+          </Button>
+        </div>
+        <img src="/imgs/cereal_home.svg" />
       </header>
 
-      <div className="home-img" role={'img'} aria-label="Bowls of cereal"></div>
+      <div className="home-img" aria-label="Bowls of cereal"></div>
 
       {/* Featured Cereals */}
       <section>

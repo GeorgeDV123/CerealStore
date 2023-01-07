@@ -27,7 +27,7 @@ export function Navbar1() {
         <Button
           onClick={openCart}
           variant="outline-dark"
-          className="rounded-circle cart-circle-big"
+          className="rounded-circle cart-circle-big "
         >
           <img src="/imgs/cart-1.svg" className="cart-img"></img>
 

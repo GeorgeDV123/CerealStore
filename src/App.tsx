@@ -6,6 +6,7 @@ import { Store } from "./Pages/Store";
 import { Confirm } from "./Pages/Confirm";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./SCSS/style.scss";
+import "./SCSS/media.scss";
 import { ShoppingCartProvider } from "./Componets/Context/ShoppingCartContext";
 import { Footer } from "./Componets/Footer";
 
