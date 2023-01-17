@@ -3,7 +3,7 @@ import { Button, Modal, Stack } from "react-bootstrap";
 import { CartItem } from "../Componets/CartItem";
 import { formatCurrency } from "../Utilities/format";
 import { useShoppingCart } from "../Componets/Context/ShoppingCartContext";
-import storeItems from "../data/Data.json";
+import storeItems from "../Data/data.json";
 
 export function Confirm() {
   const { clearCart } = useShoppingCart();
